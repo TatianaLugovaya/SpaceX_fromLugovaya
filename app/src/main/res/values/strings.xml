@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">SpaceX_fromLugovaya</string>
+
+    <string name="rocket_height">Высота</string>
+    <string name="rocket_diameter">Диаметр</string>
+    <string name="rocket_weight">Масса</string>
+    <string name="rocket_payload">Полезная нагрузка для id «leo» (низкой околоземной орбиты), </string>
+
+    <string name="first_launch">Первый запуск</string>
+    <string name="rocket_country">Страна</string>
+    <string name="rocket_launch_cost">Стоимость запуска</string>
+
+    <string name="first_stage">Первая ступень</string>
+    <string name="second_stage">Вторая ступень</string>
+    <string name="rocket_number_of_engines">Количество двигателей</string>
+    <string name="rocket_fuel_quantity">Количество топлива</string>
+    <string name="rocket_combustion_time">Время сгорания</string>
+    <string name="view_launches">Посмотреть запуски</string>
+
+    <string name="settings">Настройки</string>
+    <string name="close">Закрыть</string>
+    <string name="back">Назад</string>
+
+    <string name="units_m">m</string>
+    <string name="units_ft">ft</string>
+    <string name="units_kg">kg</string>
+    <string name="units_lb">lb</string>
 </resources>
