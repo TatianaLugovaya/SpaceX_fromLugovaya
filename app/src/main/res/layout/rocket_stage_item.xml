@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,7 +26,7 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rocket_stage_num"
-        app:text="@string/rocket_number_of_engines"
+        android:text="@string/rocket_number_of_engines"
         tools:text="@string/rocket_number_of_engines" />
 
     <TextView
@@ -48,8 +49,8 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/rocket_number_of_engines"
         app:layout_constraintTop_toBottomOf="@+id/rocket_number_of_engines"
-        app:text="@string/rocket_fuel_quantity"
-        tools:text="@string/rocket_fuel_quantity" />
+        android:text="@string/rocket_fuel_quantity"
+        tools:text="Количество топлива" />
 
     <TextView
         android:id="@+id/rocket_fuel_quantity_value"
@@ -82,7 +83,7 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/rocket_fuel_quantity"
         app:layout_constraintTop_toBottomOf="@+id/rocket_fuel_quantity"
-        app:text="@string/rocket_combustion_time"
+        android:text="@string/rocket_combustion_time"
         tools:text="@string/rocket_combustion_time" />
 
     <TextView

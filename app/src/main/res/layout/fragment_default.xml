@@ -3,8 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_appbar_default">
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="120dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/backgroundpic"/>
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_default"
@@ -48,12 +55,9 @@
         android:background="@drawable/background_information_default"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/rocket_name"
@@ -170,8 +174,8 @@
                 android:background="@drawable/background_rocket_options_item"
                 android:text="@string/view_launches"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="rocket_launch_cost_value"
-                app:layout_constraintStart_toStartOf="rocket_launch_cost"
+                app:layout_constraintEnd_toEndOf="@+id/rocket_launch_cost_value"
+                app:layout_constraintStart_toStartOf="@+id/rocket_launch_cost"
                 app:layout_constraintTop_toBottomOf="@+id/rocket_stages_recyclerview" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
