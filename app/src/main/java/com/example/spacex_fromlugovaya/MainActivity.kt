@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.spacex_fromlugovaya.databinding.ActivityMainBinding
 import com.example.spacex_fromlugovaya.default_layout.DefaultFragment
+import com.example.spacex_fromlugovaya.modal_settings_layout.ModalSettingsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,15 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        addFragment(DefaultFragment())
-
-//        val blurEffect = RenderEffect.createBlurEffect(
-//            20f, //radiusX
-//            20f, //radiusY
-//            Shader.TileMode.CLAMP
-//        )
-//        imageView.setRenderEffect(blurEffect)
-
+        addFragment(ModalSettingsFragment())
         setContentView(binding.root)
     }
 

@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/default_fragment_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginTop="120dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/backgroundpic"/>
+        android:background="@drawable/backgroundpic"
+        android:scaleType="centerCrop" />
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -65,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="48dp"
+                android:text="Falcon Heavy"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +81,9 @@
                 android:background="@color/black"
                 android:src="@drawable/ic_settings"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/rocket_name" />
+                app:layout_constraintTop_toTopOf="@+id/rocket_name"
+                android:clickable="true"
+                android:focusable="true"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rocket_options_recyclerview"
@@ -98,16 +102,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
+                android:text="@string/first_launch"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/rocket_name"
                 app:layout_constraintTop_toBottomOf="@+id/rocket_options_recyclerview"
-                tools:text="Первый запуск" />
+                tools:text="@string/first_launch" />
 
             <TextView
                 android:id="@+id/rocket_first_launch_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="7 февраля, 2018"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/rocket_options_recyclerview"
@@ -119,16 +125,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:text="@string/rocket_country"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/rocket_first_launch"
                 app:layout_constraintTop_toBottomOf="@+id/rocket_first_launch"
-                tools:text="Страна" />
+                tools:text="@string/rocket_country" />
 
             <TextView
                 android:id="@+id/rocket_country_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="США"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/rocket_first_launch_value"
@@ -140,16 +148,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:text="@string/rocket_launch_cost"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/rocket_country"
                 app:layout_constraintTop_toBottomOf="@+id/rocket_country"
-                tools:text="Стоимость запуска" />
+                tools:text="@string/rocket_launch_cost" />
 
             <TextView
                 android:id="@+id/rocket_launch_cost_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="$90 млн"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/rocket_country_value"
@@ -171,9 +181,13 @@
                 android:id="@+id/view_launches_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/background_rocket_options_item"
                 android:text="@string/view_launches"
                 android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true"
                 app:layout_constraintEnd_toEndOf="@+id/rocket_launch_cost_value"
                 app:layout_constraintStart_toStartOf="@+id/rocket_launch_cost"
                 app:layout_constraintTop_toBottomOf="@+id/rocket_stages_recyclerview" />

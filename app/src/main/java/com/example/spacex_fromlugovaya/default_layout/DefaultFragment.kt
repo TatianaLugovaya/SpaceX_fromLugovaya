@@ -1,29 +1,47 @@
 package com.example.spacex_fromlugovaya.default_layout
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.spacex_fromlugovaya.R
-import com.example.spacex_fromlugovaya.databinding.ActivityMainBinding
+import com.example.spacex_fromlugovaya.databinding.FragmentDefaultBinding
+import com.example.spacex_fromlugovaya.launches_layout.LaunchesFragment
+import com.example.spacex_fromlugovaya.modal_settings_layout.ModalSettingsFragment
 
 class DefaultFragment : Fragment(R.layout.fragment_default) {
 
+    private lateinit var binding: FragmentDefaultBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = FragmentDefaultBinding.inflate(layoutInflater)
+    }
 
-//    private lateinit var binding: DefaultFragmentBinding
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//
-//        binding.activityLayout.setOnClickListener{
-//            addFragment(DefaultFragment())
-//        }
-//        setContentView(binding.root)
-//    }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-//    private fun addFragment(fragment: Fragment) {
-//        val fragmentManager = supportFragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.add(R.id.fragment_container, fragment)
-//        fragmentTransaction.commit()
-//    }
+        binding.viewLaunchesButton.setOnClickListener {
+            addFragment(LaunchesFragment())
+        }
 
+        binding.settingsButton.setOnClickListener {
+            addFragment(ModalSettingsFragment())
+        }
+    }
+    private fun addFragment(fragment: Fragment) {
+        val transaction: FragmentTransaction = childFragmentManager.beginTransaction()
+        transaction.add(R.id.default_fragment_layout, fragment)
+        transaction.commit()
+    }
 }
