@@ -10,8 +10,8 @@
     <string name="rocket_country">Страна</string>
     <string name="rocket_launch_cost">Стоимость запуска</string>
 
-    <string name="first_stage">Первая ступень</string>
-    <string name="second_stage">Вторая ступень</string>
+    <string name="first_stage">ПЕРВАЯ СТУПЕНЬ</string>
+    <string name="second_stage">ВТОРАЯ СТУПЕНЬ</string>
     <string name="rocket_number_of_engines">Количество двигателей</string>
     <string name="rocket_fuel_quantity">Количество топлива</string>
     <string name="rocket_combustion_time">Время сгорания</string>

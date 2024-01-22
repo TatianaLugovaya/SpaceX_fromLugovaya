@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.spacex_fromlugovaya.R
@@ -25,20 +23,19 @@ class DefaultFragment : Fragment(R.layout.fragment_default) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    ): View {
         binding.viewLaunchesButton.setOnClickListener {
             addFragment(LaunchesFragment())
         }
-
         binding.settingsButton.setOnClickListener {
             addFragment(ModalSettingsFragment())
         }
+        return binding.root;
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
     private fun addFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = childFragmentManager.beginTransaction()
         transaction.add(R.id.default_fragment_layout, fragment)

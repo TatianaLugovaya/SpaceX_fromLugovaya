@@ -79,11 +79,11 @@
                 android:layout_height="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="@color/black"
+                android:clickable="true"
+                android:focusable="true"
                 android:src="@drawable/ic_settings"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/rocket_name"
-                android:clickable="true"
-                android:focusable="true"/>
+                app:layout_constraintTop_toTopOf="@+id/rocket_name" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rocket_options_recyclerview"
@@ -94,7 +94,6 @@
                 android:layout_marginEnd="32dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rocket_name"
-                tools:itemCount="6"
                 tools:listitem="@layout/rocket_options_item" />
 
             <TextView
@@ -166,16 +165,220 @@
                 app:layout_constraintTop_toTopOf="@id/rocket_launch_cost"
                 tools:text="$90 млн" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rocket_stages_recyclerview"
+            <TextView
+                android:id="@+id/rocket_stage_num_first"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
+                android:text="@string/first_stage"
+                android:textColor="@color/white"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rocket_launch_cost_value"
-                tools:itemCount="2"
-                tools:listitem="@layout/rocket_stage_item" />
+                app:layout_constraintTop_toBottomOf="@+id/rocket_launch_cost"
+                tools:text="@string/first_stage" />
+
+            <TextView
+                android:id="@+id/rocket_number_of_engines_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rocket_number_of_engines"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/rocket_stage_num_first"
+                app:layout_constraintTop_toBottomOf="@id/rocket_stage_num_first"
+                tools:text="@string/rocket_number_of_engines" />
+
+            <TextView
+                android:id="@+id/rocket_number_of_engines_value_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="64dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rocket_number_of_engines_first"
+                android:text="27"
+                tools:text="27" />
+
+            <TextView
+                android:id="@+id/rocket_fuel_quantity_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rocket_fuel_quantity"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/rocket_number_of_engines_first"
+                app:layout_constraintTop_toBottomOf="@+id/rocket_number_of_engines_first"
+                tools:text="@string/rocket_fuel_quantity" />
+
+            <TextView
+                android:id="@+id/rocket_fuel_quantity_value_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/rocket_number_of_engines_value_first"
+                app:layout_constraintTop_toTopOf="@id/rocket_fuel_quantity_first"
+                android:text="308,6"
+                tools:text="308,6" />
+
+            <TextView
+                android:id="@+id/rocket_fuel_quantity_units_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/rocket_fuel_quantity_value_first"
+                app:layout_constraintTop_toTopOf="@id/rocket_fuel_quantity_value_first"
+                android:text="@string/units_ton"
+                tools:text="@string/units_ton" />
+
+            <TextView
+                android:id="@+id/rocket_combustion_time_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rocket_combustion_time"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/rocket_fuel_quantity_first"
+                app:layout_constraintTop_toBottomOf="@+id/rocket_fuel_quantity_first"
+                tools:text="@string/rocket_combustion_time" />
+
+            <TextView
+                android:id="@+id/rocket_combustion_time_value_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/rocket_fuel_quantity_value_first"
+                app:layout_constraintTop_toTopOf="@id/rocket_combustion_time_first"
+                android:text="593"
+                tools:text="593" />
+
+            <TextView
+                android:id="@+id/rocket_combustion_time_units_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/rocket_combustion_time_value_first"
+                app:layout_constraintTop_toTopOf="@id/rocket_combustion_time_value_first"
+                android:text="@string/units_sec"
+                tools:text="@string/units_sec" />
+
+            <TextView
+                android:id="@+id/rocket_stage_num_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/second_stage"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rocket_combustion_time_first"
+                tools:text="@string/second_stage" />
+
+            <TextView
+                android:id="@+id/rocket_number_of_engines_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rocket_number_of_engines"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/rocket_stage_num_second"
+                app:layout_constraintTop_toBottomOf="@id/rocket_stage_num_second"
+                tools:text="@string/rocket_number_of_engines" />
+
+            <TextView
+                android:id="@+id/rocket_number_of_engines_value_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="64dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rocket_number_of_engines_second"
+                android:text="27"
+                tools:text="27" />
+
+            <TextView
+                android:id="@+id/rocket_fuel_quantity_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rocket_fuel_quantity"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/rocket_number_of_engines_second"
+                app:layout_constraintTop_toBottomOf="@+id/rocket_number_of_engines_second"
+                tools:text="@string/rocket_fuel_quantity" />
+
+            <TextView
+                android:id="@+id/rocket_fuel_quantity_value_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/rocket_number_of_engines_value_second"
+                app:layout_constraintTop_toTopOf="@id/rocket_fuel_quantity_second"
+                android:text="308,6"
+                tools:text="308,6" />
+
+            <TextView
+                android:id="@+id/rocket_fuel_quantity_units_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/rocket_fuel_quantity_value_second"
+                app:layout_constraintTop_toTopOf="@id/rocket_fuel_quantity_value_second"
+                android:text="@string/units_ton"
+                tools:text="@string/units_ton" />
+
+            <TextView
+                android:id="@+id/rocket_combustion_time_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="32dp"
+                android:text="@string/rocket_combustion_time"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/rocket_fuel_quantity_second"
+                app:layout_constraintTop_toBottomOf="@+id/rocket_fuel_quantity_second"
+                tools:text="@string/rocket_combustion_time" />
+
+            <TextView
+                android:id="@+id/rocket_combustion_time_value_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/rocket_fuel_quantity_value_second"
+                app:layout_constraintTop_toTopOf="@id/rocket_combustion_time_second"
+                android:text="593"
+                tools:text="593" />
+
+            <TextView
+                android:id="@+id/rocket_combustion_time_units_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/rocket_combustion_time_value_second"
+                app:layout_constraintTop_toTopOf="@id/rocket_combustion_time_value_second"
+                android:text="@string/units_sec"
+                tools:text="@string/units_sec" />
 
             <Button
                 android:id="@+id/view_launches_button"
@@ -184,13 +387,14 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/background_rocket_options_item"
-                android:text="@string/view_launches"
-                android:textSize="16sp"
                 android:clickable="true"
                 android:focusable="true"
+                android:text="@string/view_launches"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/rocket_launch_cost_value"
                 app:layout_constraintStart_toStartOf="@+id/rocket_launch_cost"
-                app:layout_constraintTop_toBottomOf="@+id/rocket_stages_recyclerview" />
+                app:layout_constraintTop_toBottomOf="@+id/rocket_combustion_time_second" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
