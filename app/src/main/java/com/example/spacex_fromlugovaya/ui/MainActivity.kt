@@ -1,10 +1,11 @@
-package com.example.spacex_fromlugovaya
+package com.example.spacex_fromlugovaya.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.spacex_fromlugovaya.R
 import com.example.spacex_fromlugovaya.databinding.ActivityMainBinding
-import com.example.spacex_fromlugovaya.default_layout.DefaultFragment
+import com.example.spacex_fromlugovaya.ui.default_layout.DefaultFragment
 
 class MainActivity : AppCompatActivity() {
 
