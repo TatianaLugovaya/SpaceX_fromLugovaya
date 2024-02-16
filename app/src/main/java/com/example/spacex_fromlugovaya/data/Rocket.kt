@@ -1,4 +1,7 @@
 package com.example.spacex_fromlugovaya.data
+
+import com.example.spacex_fromlugovaya.ui.default_layout.DefaultFragment
+
 data class Rocket(
     val rocketId: String?,
     val rocketName: String?,

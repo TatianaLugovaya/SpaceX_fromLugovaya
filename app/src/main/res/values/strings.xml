@@ -21,6 +21,9 @@
     <string name="close">Закрыть</string>
     <string name="back">Назад</string>
 
+    <string name="loading">Загрузка</string>
+    <string name="error">Ошибка</string>
+
     <string name="units_m">m</string>
     <string name="units_ft">ft</string>
     <string name="units_kg">kg</string>

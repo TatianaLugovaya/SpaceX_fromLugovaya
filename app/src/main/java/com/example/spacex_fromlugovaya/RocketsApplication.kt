@@ -1,4 +1,4 @@
-package com.example.spacex_fromlugovaya.ui
+package com.example.spacex_fromlugovaya
 
 import android.app.Application
 import com.example.spacex_fromlugovaya.data.AppContainer
